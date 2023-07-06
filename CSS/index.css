@@ -34,7 +34,7 @@ a{
 	color: var(--font-color);
 }
 a:hover{
-	color: var(--primary-color);
+	color: var(--secondary-color);
 }
 .tab{
 	margin-left: 35px;
@@ -81,6 +81,7 @@ a:hover{
 	flex-direction: row;
 	text-align: left;
 	padding: 25px 5%;
+	z-index: 99;
 }
 
 /* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
@@ -194,7 +195,7 @@ li{
 	width: 100%
 }
 
-.description{
+.epdescription{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -203,7 +204,7 @@ li{
 	font-size: 1.5em;
 	padding: 10px 20px;
 }
-.description p{
+.epdescription p{
 	margin: 0px 10px;
 	font-style: italic;
 }
@@ -252,6 +253,78 @@ li{
 	font-weight: 500;
 	text-transform: uppercase;
 }
+
+/*///////////////characters///////////////*/
+.characters{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	background-color: var(--font-color);
+	padding: 50px 0px;
+}
+
+.castcontainer, .casttile {
+  position: relative;
+  width: 100%;
+  max-width: 18vw;
+	margin: 12px;
+	color: var(--bg-color)
+}
+.characterimg, .btsimg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .3s ease;
+  background-color: rgb(0,0,0, .8);
+}
+
+.castcontainer:hover .overlay {
+  opacity: 1;
+}
+
+.btscontainer:hover .overlay {
+  opacity: 1;
+}
+
+.bio, .description {
+  color: white;
+  font-size: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+.description{
+	font-size: 1.25em;
+	text-align: center;
+}
+.castname{
+	text-align: center;
+	font-size: 1.25em;
+}
+
+.btscontainer{
+	position: relative;
+	color: var(--bg-color);
+	margin: 8px 8px 0px 0px;
+}
+
 
 /*///////////////filmmakers///////////////*/
 .filmmakers{
@@ -311,6 +384,26 @@ li{
 	margin: 0px 25px;
 }
 
+/*///////////////bts///////////////*/
+.bts{
+	margin-left:8px;
+}
+
+.bts .row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.bts .column{
+	flex: 20%;
+	max-width: 20%;
+}
+
+.bts img{
+  vertical-align: middle;
+  width: 100%;
+}
+
 /*///////////////footer///////////////*/
 footer{
 	padding: 50px 0px;
@@ -336,61 +429,6 @@ footer{
 	align-items: center;
 	width: 50%;
 	text-align: left;
-}
-
-/*Simple css to style it like a toggle switch*/
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-	padding: 0px 10px;
-}
-.theme-switch {
-  display: inline-block;
-  height: 20px;
-  position: relative;
-  width: 35px;
-}
-
-.theme-switch input {
-  display:none;
-}
-
-.slider {
-  background-color: var(--primary-color);
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: .4s;
-}
-
-.slider:before {
-  background-color: var(--bg-color);
-  bottom: 4px;
-  content: "";
-  height: 12px;
-  left: 4px;
-  position: absolute;
-  transition: .4s;
-  width: 12px;
-}
-
-input:checked + .slider {
-  background-color: var(--font-color);
-}
-
-input:checked + .slider:before {
-  transform: translateX(16px);
-}
-
-.slider.round {
-  border-radius: 12px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 }
 
 /*Media Queries*/
