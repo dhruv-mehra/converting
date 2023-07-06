@@ -46,32 +46,44 @@ a:hover{
 
 #navbar{
 	display: flex;
-	flex-direction: column;
+	width: 100%;
+	background-color: var(--bg-color);
 	justify-content: center;
 	align-items: center;
-	text-align: center;
-	padding: 50px 5% 0px;
-	width: 100%;
-	z-index: 99;
-	transition: 0;
-	background-color: var(--bg-color);
+	scroll-behavior: smooth;
 }
 
-.title, #nav{
+#titleBlock, #navBlock{
 	width: 100%;
 	display: flex;
 	justify-content: center;
 }
 
-.title{
+#titleBlock{
 	flex-direction: column;
 }
 
-.nav{
+#navBlock{
 	flex-direction: row;
-	margin: 45px 0px;
+	margin: 50px 0px;
 	text-align: center;
 }
+
+.unstuck{
+	flex-direction: column;
+	text-align: center;
+	padding: 25px 5% 0px;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+	flex-direction: row;
+	text-align: left;
+	padding: 25px 5%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
 
 /*///////////////title///////////////*/
 #title{
@@ -95,12 +107,12 @@ h1, h2{
 }
 
 h3{
-	font-size: 1.5em;
+	font-size: 2em;
 	font-weight: 600;
 	font-style: normal;
 	color: var(--secondary-color);
 	text-align: center;
-	margin: 100px 0px 0px 0px;
+	margin: 50px 0px;
 }
 /*///////////////nav///////////////*/
 ol{
@@ -135,7 +147,7 @@ li{
 
 /*///////////////logline///////////////*/
 .logline{
-	background-color: var(--font-color);
+	background-color: var(--primary-color);
 	margin:0;
 	padding: 25 0px;
 }
@@ -146,26 +158,19 @@ li{
 	font-weight: 400;
 	font-style: italic;
 	padding: 0px 10%;
-	margin: 0 0 50px;
-}
-
-.logline h3{
-	margin: 50px 0 25px;
+	margin: 50px 0;
 }
 
 /*///////////////trailer///////////////*/
 .trailer{
 	width: 100%;
 	background-color: var(--secondary-color);
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
 }
 
-
-.trailer h3{
-	margin: 100px 0px 50px;
-	color: var(--bg-color);
+.trailervid{
+	aspect-ratio: 16 / 8.8;
+  width: 100%;
+	padding: 100px 200px;
 }
 
 /*///////////////episodes///////////////*/
@@ -243,7 +248,68 @@ li{
 	width:50%;
 }
 
+.bold{
+	font-weight: 500;
+	text-transform: uppercase;
+}
 
+/*///////////////filmmakers///////////////*/
+.filmmakers{
+	display:flex;
+	align-items: flex-start;
+	flex-direction: row;
+	font-size: 1.5em;
+	margin: 0 5% 50px;
+}
+
+.filmmaker{
+	width: 33.33%;
+	padding: 0 25px 25px 25px;
+}
+
+.filmmakerimg{
+	width: 100%;
+}
+
+.filmmaker p{
+	padding: 0 0 0 15px;
+}
+
+/*///////////////director statement///////////////*/
+
+.directorStatement{
+	background-color: var(--primary-color);
+	margin:0;
+	padding: 25px 100px;
+}
+
+.directorStatement p{
+	color:var(--bg-color);
+	font-style: italic;
+	text-align: left;
+	font-size: 1.5em;
+	font-weight: 400;
+	padding: 2px 25px 2px;
+	hyphens: auto;
+}
+
+.directorStatement h3{
+	color:var(--bg-color);
+	margin: 50px 0 25px;
+}
+
+.directing{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 25px 0;
+}
+
+.directing img{
+	width: 40%;
+	height: 40%;
+	margin: 0px 25px;
+}
 
 /*///////////////footer///////////////*/
 footer{
@@ -349,6 +415,7 @@ input:checked + .slider:before {
 		align-items: center;
 		text-align: center;
 		padding: 30px 2% 15px;
+		scroll-behavior: smooth;
 	}
 	#title{
 		font-size:2.5em;

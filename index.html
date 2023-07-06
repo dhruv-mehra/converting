@@ -5,7 +5,7 @@
 	<title>Converting the Webseries</title>
 	<link rel="stylesheet" href="CSS/index.css">
 	<link rel="stylesheet" href="https://use.typekit.net/qng2wuk.css">
-	<script src="https://kit.fontawesome.com/56f76b372d.js"></script>
+	<script src="https://kit.fontawesome.com/56f76b372d.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-177242966-1"></script>
@@ -19,71 +19,70 @@
 </head>
 
 <body>
-	<header id="navbar">
-		<div class="title"><a href="index.html" class="active">
+	<header id="navbar" class ="unstuck">
+		<div id="titleBlock"><a href="index.html" class="active">
 					<h1 id="title">Converting</h1>
 					<h2 id="subtitle">the webseries</h2>
 				</a>
 		</div>
-		<div class="nav">
+		<div id="navBlock">
 			<ol>
-					<li><a href="about.html">HOME</a></li>
-	  			<li><a href="reel.html">EPISODES</a></li>
-	  			<li><a href="reel.html">THE TEAM</a></li>
-	  			<li><a href="reel.html">CONTACT</a></li>
+					<li><a href=#trailer>TRAILER</a></li>
+	  			<li><a href=#episodes>EPISODES</a></li>
+	  			<li><a href=#cast>CAST</a></li>
+	  			<li><a href=#filmmakers>FILMMAKERS</a></li>
+	  			<li><a href=#contact>CONTACT</a></li>
 			</ol>
 		</div>
 	</header>
 
+	<section class="trailer anchor" id="trailer">
+		<iframe class ="trailervid" src="https://www.youtube.com/embed/yrMJB4zVIDY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+	</section>
+
 	<section class ="poster">
-		<img src ="assets/Ozona Poster Laurels.JPG" alt="poster" onclick="openModal();currentSlide(17)" class="hover-shadow">
+		<img src ="assets/poster_1.jpeg" alt="poster" onclick="openModal();currentSlide(17)" class="hover-shadow">
 		<p><span class="role">poster design by: </span>Geena Vetula</p>
 	</section>
 
 	<section class ="logline">
-		<h3>LOGLINE</h3>
 		<p>"A young, South Asian, intercultural couple in Chicago navigate the complexities of their identities both together and apart."</p>
 	</section>
 
-	<section class="trailer">
-		<h3>OFFICIAL TRAILER</h2>
-		<div style="padding:50% 0 0 0;position: relative;"><iframe src="https://www.youtube.com/embed/tpneSZv8P6c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:90%;height:90%;"></iframe></div>
-	</section>
 
-
-	<section class ="episodes">
+	<section class ="episodes anchor" id="episodes">
 		<h3>EPISODES</h3>
 		<div class = "scroll">
 			<div class = "episode">
-				<img src="images/1.3D_1.7.1.jpg" alt="EP1">
+				<img src="images/stills/1.3D_1.7.1.jpg" alt="EP1">
 				<div class = "description">
 					<p id = "episodeNum">1</p>
 					<p>Liam tries to convert to Islam, but Iman has an unholy announcement of her own.</p>
 				</div>
 			</div>
 			<div class = "episode">
-				<img src="images/2.9A_1.99.1.jpg" alt="EP2">
+				<img src="images/stills/2.9A_1.99.1.jpg" alt="EP2">
 				<div class = "description">
 					<p id = "episodeNum">2</p>
 					<p>Iman’s cousin makes a surprise visit. Liam is banished to hang out with his boys who help him weigh a new opportunity.</p>
 				</div>
 			</div>
 			<div class = "episode">
-				<img src="images/3.3D_1.37.1.jpg" alt="EP3">
+				<img src="images/stills/3.3D_1.37.1.jpg" alt="EP3">
 				<div class = "description">
 					<p id = "episodeNum">3</p>
 					<p>Liam and Iman hit up the backyard BBQ at Liam’s childhood home. When Liam’s highschool sweetheat makes an appearance, Iman reopens her DMs.</p>
 				</div>
 			</div>
 			<div class = "episode">
-				<img src="images/4.6A_1.96.1.jpg" alt="EP4">
+				<img src="images/stills/4.6A_1.96.1.jpg" alt="EP4">
 				<div class = "description">
 					<p id = "episodeNum">4</p>
 					<p>Iman suffers from international FOMO while Liam is away. When he returns, the couple must face their fate amid foreplay and vomiting fits.</p>
 				</div>
 			</div>
 			<div class = "episode">
-				<img src="images/5.7G_1.59.1.jpg" alt="EP5">
+				<img src="images/stills/5.7G_1.59.1.jpg" alt="EP5">
 				<div class = "description">
 					<p id = "episodeNum">5</p>
 					<p>Iman and Liam make a decision about their future together.</p>
@@ -93,28 +92,68 @@
 
 	</section>
 
-	<section class ="cast">
+	<section class ="cast anchor" id="cast">
 		<h3>CAST</h3>
 		<div class ="castmate">
 			<img src="images/Team/4.2C_1.7.1.jpg" alt="Iman" class = "castimg"/>
-			<p>Iman Mirza is a Pakistani-Muslim living in Chicago by way of the ‘International Student to Elite U.S. University Pipeline.’ Upselling ethnic
+			<div>
+				<p><span class ="bold">Iman Mirza</span> is a Pakistani-Muslim living in Chicago by way of the ‘International Student to Elite U.S. University Pipeline.’ Upselling ethnic
 				jewelry on Etsy to influencers and middle-aged women by day, Iman navigates a secret relationship with a functionally white boyfriend alongside
 				an international sneaky link, all the while attempting to speak for a culture she doesn’t feel she belongs to.</p>
+				<p>played by Mirrat</p>
+			</div>
 		</div>
 		<div class ="castmate">
-			<p>Raised on soccer carpools, ants-on-a-log, and Natty Lites at the county fair, it took Liam Sharma 25 years and dating a Brown girl to realize
+			<div>
+				<p>Raised on soccer carpools, ants-on-a-log, and Natty Lites at the county fair, it took <span class ="bold">Liam Sharma</span> 25 years and dating a Brown girl to realize
 				he’s not white. This All-American Half-Indian tech bro spends his days toiling away at a job he hates, get- ting kicked out of his own apartment,
 				and co-opting the identities of everyone around him. But, when an opportunity knocks on the other side of the country, he must figure out who he truly is.</p>
+				<p>played by Rishi Mahesh</p>
+			</div>
 			<img src="images/Team/2.1B_1.6.1.jpg" alt="Liam" class = "castimg"/>
 		</div>
 	</section>
 
-	<section class ="press">
-		<h3>PRESS</h3>
+<h3>FILMMAKERS</h3>
+
+	<section class ="filmmakers anchor" id="filmmakers">
+		<div class ="filmmaker">
+			<img src="images/filmmakers/dhruv.JPG" alt="Liam" class = "filmmakerimg"/>
+			<p><span class ="bold">Dhruv Mehra</span> is an Indian-Japanese-American cinematographer. Raised in Atlanta, Georgia, he made his way to Chicago to study film at Northwestern
+				University with a focus in narrative cinematography and directing. He enjoys stories that tackle big ideas in small worlds. Dhruv has worked on shorts, fea- tures, TV,
+				commercials, music videos, and webseries’ in the United States, India, and Pakistan. His direct- ing thesis “Ozona,” (which he co-wrote with Ariella) premiered in June 2022.</p>
+		</div>
+		<div class ="filmmaker">
+			<img src="images/filmmakers/IMG_8815.jpg" alt="Iman" class = "filmmakerimg"/>
+			<p><span class ="bold">Ariella Khan</span> is a Chicago-based writer and director raised between the Midwest of America and Karachi, Pakistan. She graduated
+				from Northwestern University where she studied film and creative writing. Her coming-of-age short film “Roti,” played at festivals across the country. Much of her work
+				focuses on grappling with her Pakistani-American identity and the intersections of assimilation, colonization and intergenerational familial relationships.</p>
+		</div>
+		<div class ="filmmaker">
+			<img src="images/filmmakers/Devon.png" alt="Liam" class = "filmmakerimg"/>
+			<p><span class ="bold">Devon Gulati</span> is an award-winning producer with a strong passion for creating original content. Throughout his years at Columbia and DeVry, he has
+				accumulated the connections and skills to pull high-level projects together. As a producer of “Converting,” Devon is ecstatic to work alongside premiere talent. Devon's
+				experience in editing and cinematography has enabled him to bridge the gap between creative and analytical skills to elevate each production he works on.</p>
+		</div>
 	</section>
 
-	<section class ="contact">
-		<h3>CONTACT</h3>
+	<section class = "directorStatement anchor" id="directorStatement">
+		<h3>DIRECTOR'S STATEMENT</h3>
+		<div class = "directing">
+			<img src="images/BTS/IMG_9175.JPG" alt="Directing">
+			<div>
+				<p>Raised between two hemispheres with opposing values and expectations, cultural confusion and contradiction has been my always. Never fully fitting into either world, my existence
+					has been a constant off-broadway performance of different versions of myself for my different homes. And now that the Aunties are prowling on Instagram and sorority sisters
+					are getting henna tattoos, my two worlds collide more than ever.</p>
+				<p>Romantic relationships forced this conflict into the open. My identity crisis is hard enough, but to square that and compound it with another person’s makes for a beautiful,
+					complicated, hilarious mess.</p>
+				<p>Converting explores the dynamics of two people caught between worlds while caught up in each other, in a specifically South Asian American context.</p>
+				<p> South Asian representation in western media today is more visible than ever before, but it’s often still composed of one-dimensional characters, written as palatable
+					representatives for the mainstream rather than real, complicated, messy, people. Converting is about the confused and complex for the complex and confused. But, I believe with
+					specificity comes universality.</p>
+				<p class = "right">- Ariella Khan</p>
+			</div>
+		</div>
 	</section>
 
 	<footer>
@@ -131,12 +170,12 @@
 	  	</div>
 		</div>
 		<div class="socials">
-			<a href="https://vimeo.com/user94368193" title="Vimeo" target="_blank"  ><i class="fab fa-vimeo-v"></i></a>
-			<a href="https://www.instagram.com/dhruvohno/" title="Instagram" target="_blank"  ><i class="fab fa-instagram"></i></a>
-			<a href="https://www.imdb.com/name/nm7416997/?ref_=fn_al_nm_1" title="IMBd" target="_blank"  ><i class="fab fa-imdb"></i></a>
+			<a href="Mailto:convertingseries@gmail.com" title="Email" target="_blank"  ><i class="fa-regular fa-envelope"></i></a>
+			<a href="https://www.instagram.com/converting.series/" title="Instagram" target="_blank"  ><i class="fab fa-instagram"></i></a>
+			<a href="https://www.youtube.com/watch?v=yrMJB4zVIDY" title="YouTube" target="_blank"  ><i class="fab fa-youtube"></i></a>
 		</div>
 	</footer>
 	<!-- <script type="text/javascript" src="JS/scroll.js"></script> -->
-	<script type="text/javascript" src="JS/dark.js"></script>
+	<script type="text/javascript" src="JS/scroll.js"></script>
 </body>
 </html>
