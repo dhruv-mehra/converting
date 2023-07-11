@@ -26,6 +26,7 @@ body{
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	overflow-x: hidden;
 }
 * {box-sizing: border-box;}
 /*///////////////master///////////////*/
@@ -41,6 +42,11 @@ a:hover{
 }
 .active{
 	color: var(--primary-color);
+}
+
+section{
+	padding: 25px 0px;
+	margin: 25px 0px;
 }
 /*///////////////header///////////////*/
 
@@ -134,8 +140,6 @@ li{
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	padding: 0px;
-	margin: 50px 0px;
 }
 
 .poster img{
@@ -149,9 +153,8 @@ li{
 /*///////////////logline///////////////*/
 .logline{
 	background-color: var(--primary-color);
-	margin:0;
-	padding: 25 0px;
 }
+
 .logline p{
 	color:var(--bg-color);
 	text-align: center;
@@ -165,48 +168,50 @@ li{
 /*///////////////trailer///////////////*/
 .trailer{
 	width: 100%;
-	background-color: var(--secondary-color);
 }
 
 .trailervid{
 	aspect-ratio: 16 / 8.8;
   width: 100%;
-	padding: 100px 200px;
+	padding: 0px 200px;
 }
 
 /*///////////////episodes///////////////*/
-.scroll{
-	margin: 25px 0px;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-content: flex-start;
-	overflow-x: auto;
-	min-width: 100%;
+.episodes{
+	padding: 25px 100px;
+	background-color: var(--font-color);
+	color: var(--bg-color);
+}
+
+.episodes h3{
+	color: var(--bg-color);
 }
 
 .episode{
-	display: block;
-	margin: 0 5px 0px 0px;
-	min-width: 40%;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin: 15px 0px;
 }
 
 .episode img{
-	width: 100%
+	max-width: 55%;
+	padding: 0px 25px;
 }
 
 .epdescription{
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: flex-start;
-	text-align: left;
 	font-size: 1.5em;
-	padding: 10px 20px;
+	padding: 0px 20px;
 }
 .epdescription p{
 	margin: 0px 10px;
 	font-style: italic;
+}
+
+p.runtime{
+	font-weight: 500;
+	font-style: normal;
+	padding: 15px 0px;
 }
 
 #episodeNum{
@@ -214,19 +219,11 @@ li{
 	font-weight: 500;
 	font-style: normal;
 	color:var(--secondary-color);
-	line-height: 90%;
-}
-
-.episodes img:hover {
-  box-shadow: 0 4px 8px 0 var(--shadow-color);
-  cursor: pointer;
+	padding: 0px;
 }
 
 
 /*///////////////cast///////////////*/
-.cast{
-	padding: 100px 0px 0px;
-}
 
 .cast h3{
 	margin: 0 0 50px;
@@ -261,7 +258,7 @@ li{
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-start;
-	background-color: var(--font-color);
+	background-color: var(--secondary-color);
 	padding: 50px 0px;
 }
 
