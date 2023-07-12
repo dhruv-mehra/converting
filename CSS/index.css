@@ -27,6 +27,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	overflow-x: hidden;
+		width: 100vw;
 }
 * {box-sizing: border-box;}
 /*///////////////master///////////////*/
@@ -36,9 +37,6 @@ a{
 }
 a:hover{
 	color: var(--secondary-color);
-}
-.tab{
-	margin-left: 35px;
 }
 .active{
 	color: var(--primary-color);
@@ -98,7 +96,7 @@ section{
 	font-style: normal;
 	font-weight: 500;
 	color: var(--primary-color);
-	margin: 0 0 0 0;
+	margin: 0px;
 }
 
 #subtitle{
@@ -106,7 +104,7 @@ section{
 	font-weight: 400;
 	font-style: italic;
 	color: var(--secondary-color);
-	margin: 0 0 0 0;
+	margin: 0px;
 }
 
 h1, h2{
@@ -120,6 +118,7 @@ h3{
 	color: var(--secondary-color);
 	text-align: center;
 	margin: 50px 0px;
+	padding: 0px;
 }
 /*///////////////nav///////////////*/
 ol{
@@ -130,8 +129,8 @@ li{
 	font-size: 1.25em;
 	font-weight: 600;
 	display: inline;
-	margin: 0px 25px;
-	padding: 0px;
+	margin: 0px;
+	padding: 0px 15px;
 }
 
 /*///////////////poster///////////////*/
@@ -158,53 +157,61 @@ li{
 .logline p{
 	color:var(--bg-color);
 	text-align: center;
-	font-size: 3em;
+	font-size: 2em;
 	font-weight: 400;
 	font-style: italic;
 	padding: 0px 10%;
-	margin: 50px 0;
 }
 
 /*///////////////trailer///////////////*/
 .trailer{
-	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .trailervid{
-	aspect-ratio: 16 / 8.8;
-  width: 100%;
-	padding: 0px 200px;
+	aspect-ratio: 16 / 9;
+  width: 80vw;
+	padding: 0px;
+
 }
 
 /*///////////////episodes///////////////*/
 .episodes{
-	padding: 25px 100px;
+	padding: 0px 100px;
 	background-color: var(--font-color);
 	color: var(--bg-color);
 }
 
 .episodes h3{
 	color: var(--bg-color);
+	padding: 50px 0 25px;
+	margin: 0px;
 }
 
 .episode{
 	display: flex;
 	flex-direction: row;
 	align-items: flex-start;
-	margin: 15px 0px;
+	padding: 15px 0px;
+	width: 100vw;
 }
 
-.episode img{
-	max-width: 55%;
-	padding: 0px 25px;
+.episodevid{
+	aspect-ratio: 16 / 9;
+  width: 100%;
+	margin: 0px 25px;
+	width: 50vw;
 }
 
 .epdescription{
 	font-size: 1.5em;
 	padding: 0px 20px;
+	width: 50vw;
 }
 .epdescription p{
-	margin: 0px 10px;
+	padding: 0px 10px;
 	font-style: italic;
 }
 
@@ -220,6 +227,7 @@ p.runtime{
 	font-style: normal;
 	color:var(--secondary-color);
 	padding: 0px;
+	margin: 0px;
 }
 
 
@@ -227,6 +235,7 @@ p.runtime{
 
 .cast h3{
 	margin: 0 0 50px;
+	padding: 0px;
 }
 
 .castmate{
@@ -237,7 +246,7 @@ p.runtime{
 }
 
 .castmate p{
-	font-size: 2em;
+	font-size: 1.5em;
 	padding: 25px;
 	color:var(--bg-color);
 }
@@ -259,16 +268,19 @@ p.runtime{
 	justify-content: center;
 	align-items: flex-start;
 	background-color: var(--secondary-color);
-	padding: 50px 0px;
+	padding: 25px 0px;
 }
 
-.castcontainer, .casttile {
-  position: relative;
-  width: 100%;
-  max-width: 18vw;
-	margin: 12px;
+.casttile, .castcontainer{
+	position: relative;
+}
+
+.casttile {
+	max-width: 20%;
+	padding: 10px;
 	color: var(--bg-color)
 }
+
 .characterimg, .btsimg {
   display: block;
   width: 100%;
@@ -298,7 +310,7 @@ p.runtime{
 
 .bio, .description {
   color: white;
-  font-size: 1.5em;
+  font-size: 1em;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -308,12 +320,12 @@ p.runtime{
 }
 
 .description{
-	font-size: 1.25em;
+	font-size: 1em;
 	text-align: center;
 }
 .castname{
 	text-align: center;
-	font-size: 1.25em;
+	font-size: 1em;
 }
 
 .btscontainer{
@@ -324,12 +336,17 @@ p.runtime{
 
 
 /*///////////////filmmakers///////////////*/
+#filmmakers{
+	margin: 0px;
+}
+
 .filmmakers{
 	display:flex;
 	align-items: flex-start;
 	flex-direction: row;
-	font-size: 1.5em;
-	margin: 0 5% 50px;
+	font-size: 1.25em;
+	padding: 0 5%;
+	margin: 0px;
 }
 
 .filmmaker{
@@ -350,35 +367,38 @@ p.runtime{
 .directorStatement{
 	background-color: var(--primary-color);
 	margin:0;
-	padding: 25px 100px;
+	padding: 25px;
 }
 
 .directorStatement p{
 	color:var(--bg-color);
-	font-style: italic;
 	text-align: left;
 	font-size: 1.5em;
 	font-weight: 400;
-	padding: 2px 25px 2px;
+	padding: 0px 0px 3px;
+	text-indent: 0px;
 	hyphens: auto;
 }
 
 .directorStatement h3{
 	color:var(--bg-color);
-	margin: 50px 0 25px;
+	padding: 50px 0 25px;
+	margin: 0px;
 }
 
 .directing{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 25px 0;
+	display: block;
 }
 
 .directing img{
-	width: 40%;
-	height: 40%;
-	margin: 0px 25px;
+	width: 60%;
+	padding: 0 25px 25px 0px;
+	margin: 0px;
+	float: left;
+}
+
+.right{
+	float: right;
 }
 
 /*///////////////bts///////////////*/
@@ -402,90 +422,64 @@ p.runtime{
 }
 
 /*///////////////footer///////////////*/
-footer{
-	padding: 50px 0px;
+.contact{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	justify-content: flex-start;
 	align-items: center;
-}
-.copyright{
-	font-size:12px;
-	padding: 10px;
-}
-.socials a{
-	padding: 10px;
-	font-size: 20px;
-}
-.socials{
-	text-align: right;
-	width: 50%;
-}
-.left{
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	width: 50%;
 	text-align: left;
+	font-size: 1em;
+	background-color: var(--secondary-color);
+	color: var(--bg-color);
+	margin: 0px;
 }
 
+.contact h3{
+	color:var(--bg-color);
+	padding: 0px;
+	margin: 0px 0px 25px;
+}
+
+div.contactinfo{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	padding: 0px;
+}
+
+.contactinfo div{
+	display: flex;
+	flex-direction: column;
+	padding: 25px 50px 0px 0px;
+}
+
+.contact img{
+	width: 40%;
+	padding: 0px 50px;
+}
+
+.contactinfo a{
+	color: var(--bg-color);
+	padding: 0px 0px 2px;
+}
+
+.contactinfo a:hover{
+	color: var(--font-color);
+}
+
+.contact .bold{
+	margin: 0px 0px 15px 0px;
+}
 /*Media Queries*/
+@media screen and (max-width: 2600px) {
+
+}
+
 @media screen and (max-width: 1200px) {
-	.pics{
-		width: 100%;
-		justify-content: center;
-		padding: 25px 0px;
-	}
-	.bio{
-		width: 80%;
-		padding: 25px 15px 25px 15px;
-	}
+
 }
 
 @media screen and (max-width: 600px) {
-	body{
-		margin: 0;
-	}
-	#navbar{
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		padding: 30px 2% 15px;
-		scroll-behavior: smooth;
-	}
-	#title{
-		font-size:2.5em;
-	}
-	h2, .nav li, .worktitle{
-		font-size:1.2em;
-	}
-	ol{
-		margin: 15px 0px 0px;
-	}
-	li{
-		margin: 0px 0px 0px 20px;
-		float: none;
-	}
-	.works{
-		padding: 250px 0px 0px;
-	}
-	.work{
-		padding: 10px 0px;
-	}
-	.stills img{
-		margin: 1px;
-		height:100%;
-	}
-	.about{
-		padding: 250px 0px 0px;
-	}
-	.bio{
-		font-size: 1.1em;
-	}
-	footer{
-		margin: 0px 5%;
-		padding: 25px 0px 10px;
-	}
-	.copyright,.theme-switch,.socials i{
-			font-size: 1.15em;
-	}
+
 }

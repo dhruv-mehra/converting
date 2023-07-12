@@ -15,6 +15,7 @@ function stick() {
     header.classList.remove("unstuck");
     document.getElementById("subtitle").style.display = "none";
     document.getElementById("title").style.fontSize = "3em";
+    document.getElementById("navBlock").style.fontSize = "0.75em";
     document.getElementById("navBlock").style.margin = "0 0 0 0";
     document.getElementById("navBlock").style.justifyContent = "right";
   } else {
@@ -22,6 +23,7 @@ function stick() {
     header.classList.add("unstuck");
     document.getElementById("subtitle").style.display = "block";
     document.getElementById("title").style.fontSize = "6em";
+    document.getElementById("navBlock").style.fontSize = "1em";
     document.getElementById("navBlock").style.margin = "50px 0px";
     document.getElementById("navBlock").style.justifyContent = "center";
 
