@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("index.css");
+@import url("https://use.typekit.net/qng2wuk.css");
 /* CSS Document */
 :root {
 	 --primary-color: #CE5B2E;
@@ -20,6 +21,7 @@
 body{
 	margin: 0px;
 	font-family: neue-kabel, sans-serif;
+	font-weight: 400;
 	color: var(--font-color);
 	background-color: var(--bg-color);
 	display: flex;
