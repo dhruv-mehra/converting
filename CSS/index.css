@@ -32,6 +32,26 @@ body{
 	max-width: 100%;
 }
 * {box-sizing: border-box;}
+#myBtn {
+	font-family: neue-kabel, sans-serif;
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: var(--secondary-color); /* Set a background color */
+  color: var(--bg-color); /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: var(--font-color); /* Add a dark-grey background on hover */
+}
 /*///////////////master///////////////*/
 a{
 	text-decoration: none;
@@ -197,7 +217,7 @@ li{
 	flex-direction: row;
 	align-items: flex-start;
 	padding: 15px 0px;
-	width: 100vw;
+	width: 100%;
 }
 
 .episodevid{
@@ -423,8 +443,8 @@ p.runtime{
 }
 
 .bts .column{
-	flex: 20%;
-	max-width: 20%;
+	flex: 25%;
+	max-width: 25%;
 }
 
 .bts img{
@@ -435,23 +455,24 @@ p.runtime{
 /*///////////////footer///////////////*/
 .contact{
 	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+	align-items: flex-start;
 	text-align: left;
 	font-size: 1em;
 	background-color: var(--secondary-color);
 	color: var(--bg-color);
 	margin: 0px;
+	width: 100%;
 }
 
 .contact h3{
 	color:var(--bg-color);
 	padding: 0px;
-	margin: 0px 0px 25px;
+	margin: 0px;
 }
 
-div.contactinfo{
+div.contact{
 	display: flex;
 	flex-direction: row;
 	justify-content: flex-start;
@@ -459,23 +480,18 @@ div.contactinfo{
 	padding: 0px;
 }
 
-.contactinfo div{
+.contact div{
 	display: flex;
 	flex-direction: column;
-	padding: 25px 50px 0px 0px;
-}
-
-.contact img{
-	width: 40%;
 	padding: 0px 50px;
 }
 
-.contactinfo a{
+.contact a{
 	color: var(--bg-color);
 	padding: 0px 0px 2px;
 }
 
-.contactinfo a:hover{
+.contact a:hover{
 	color: var(--font-color);
 }
 
@@ -547,7 +563,7 @@ li{
 }
 
 .trailervid{
-	width: 100vw;
+	width: 100%;
 }
 .logline{
 	font-size: 0.5em;
@@ -557,7 +573,7 @@ li{
 	padding: 0px;
 }
 .poster img{
-	width: 100vw;
+	width: 100%;
 	padding: 10px;
 }
 .poster p{
@@ -573,7 +589,7 @@ li{
 }
 .episodevid{
 	margin: 0px 25px;
-	width: 100vw;
+	width: 100%;
 }
 iframe.episodevid{
 	margin: 0px;
@@ -581,7 +597,7 @@ iframe.episodevid{
 .epdescription{
 	font-size: 1em;
 	padding: 10px 20px 0px 20px;
-	width: 100vw;
+	width: 100%;
 }
 .epdescription p{
 	margin: 0px;
