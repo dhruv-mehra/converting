@@ -27,7 +27,7 @@ body{
 	justify-content: center;
 	align-items: center;
 	overflow-x: hidden;
-		width: 100vw;
+	max-width: 100%;
 }
 * {box-sizing: border-box;}
 /*///////////////master///////////////*/
@@ -43,8 +43,7 @@ a:hover{
 }
 
 section{
-	padding: 25px 0px;
-	margin: 25px 0px;
+	padding: 25px 0px 25px;
 }
 /*///////////////header///////////////*/
 
@@ -180,6 +179,7 @@ li{
 /*///////////////episodes///////////////*/
 .episodes{
 	padding: 0px 100px;
+	margin: 0px;
 	background-color: var(--font-color);
 	color: var(--bg-color);
 }
@@ -234,15 +234,19 @@ p.runtime{
 /*///////////////cast///////////////*/
 
 .cast h3{
-	margin: 0 0 50px;
+	margin: 25px 0;
 	padding: 0px;
 }
 
 .castmate{
-	display:flex;
+	display: flex;
+	justify-content: flex-start;
 	align-items: center;
-	flex-direction: row;
 	background-color: var(--primary-color);
+}
+
+#rishi{
+	flex-direction: row-reverse;
 }
 
 .castmate p{
@@ -337,7 +341,7 @@ p.runtime{
 
 /*///////////////filmmakers///////////////*/
 #filmmakers{
-	margin: 0px;
+	margin: 25px;
 }
 
 .filmmakers{
@@ -481,5 +485,231 @@ div.contactinfo{
 }
 
 @media screen and (max-width: 600px) {
+section{
+	margin:12px 0px 0px;
+	padding:12px 0px 0px;
+}
+#title{
+	font-size: 3.5em;
+}
+#subtitle{
+	font-size: 2em;
+}
+#navBlock{
+	margin: 25px 0px;
+	flex-direction: column;
+}
+li{
+	font-size: 1em;
+	display: block;
+}
+
+.trailervid{
+	width: 100vw;
+}
+.logline{
+	font-size: 0.5em;
+}
+.poster{
+	margin: 2px 0px 0px 0px;
+	padding: 0px;
+}
+.poster img{
+	width: 100vw;
+	padding: 10px;
+}
+.poster p{
+	font-size: 1em;
+	padding: 0px;
+}
+#episodes h3{
+	padding: 25px 0px;
+}
+.episode{
+	flex-direction: column;
+	padding: 0px 0px 25px;
+}
+.episodevid{
+	margin: 0px 25px;
+	width: 100vw;
+}
+iframe.episodevid{
+	margin: 0px;
+}
+.epdescription{
+	font-size: 1em;
+	padding: 10px 20px 0px 20px;
+	width: 100vw;
+}
+.epdescription p{
+	margin: 0px;
+	padding: 0px 0px 5px;
+}
+#episodeNum{
+	font-size: 1.5em;
+}
+
+.cast h3{
+	margin: 0px 0px 25px;
+}
+
+.castmate{
+	flex-direction: column;
+}
+
+.castmate p{
+	font-size: 1em;
+	padding: 15px;
+	margin: 0px;
+}
+
+.castimg{
+	width:100%;
+	padding: 10px;
+}
+#rishi{
+	flex-direction: column;
+}
+
+.characters{
+	padding: 0px;
+	padding-left: 10px;
+}
+
+.casttile {
+	max-width: 50%;
+	padding: 10px 10px 0px 0px;
+}
+
+.bio, .description {
+  font-size: 0.5em;
+}
+
+.description{
+	font-size: 0.75em;
+}
+.castname{
+	font-size: 0.75em;
+}
+p.castname{
+		margin: 4px 0px;
+}
+
+.btscontainer{
+	position: relative;
+	color: var(--bg-color);
+	margin: 8px 8px 0px 0px;
+}
+
+#filmmakers{
+	margin: 0px 0px 25px 0px;
+}
+
+.filmmakers{
+	flex-direction: column;
+	font-size: 1em;
+	margin: 0px;
+	padding: 0px;
+}
+
+.filmmaker{
+	width: 100%;
+	padding: 0px;
+}
+
+.filmmakerimg{
+	width: 100%;
+	padding: 0px 10px 0px 10px;
+}
+
+.filmmaker p{
+	padding: 10px 20px 30px 20px;
+	margin: 0px;
+}
+
+.directorStatement{
+	margin:0;
+	padding: 10px;
+}
+
+.directorStatement p{
+	text-align: left;
+	font-size: 1em;
+	padding: 6px 0px 0px 0px;
+}
+
+.directorStatement h3{
+	padding: 25px 0px;
+}
+
+.directing img{
+	width: 100%;
+	padding: 0px 0px 10px 0px;
+}
+
+/*///////////////bts///////////////*/
+.bts{
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+}
+
+.bts .row{
+	margin: 0px 0px 25px 10px;
+}
+
+.bts h3{
+	margin: 25px 0px;
+	font-size: 1.5em;
+}
+
+.bts .column{
+	flex:50%;
+	max-width: 50%;
+}
+
+.bts img{
+  vertical-align: middle;
+  width: 100%;
+}
+.btscontainer{
+	margin: 8px 8px 0px 0px;
+}
+
+.contact{
+	width: 100%;
+	padding: 0px 0px 50px;
+}
+
+.contact h3{
+	margin: 25px 0px;
+}
+
+div.contactinfo{
+	flex-direction: column;
+	padding: 0px;
+}
+
+.contactinfo div{
+	display: flex;
+	flex-direction: column;
+	padding: 0px;
+}
+
+.contact img{
+	width: 0%;
+	padding: 0px;
+	display: none;
+}
+
+.contactinfo a{
+	padding: 0px 0px 2px;
+}
+
+.contactinfo a:hover{
+}
+
+.contact .bold{
+	margin: 20px 0px 10px;
+}
 
 }
