@@ -507,9 +507,6 @@ div.contact{
 	margin: 0px 0px 15px 0px;
 }
 /*Media Queries*/
-@media screen and (max-width: 2600px) {
-
-}
 
 @media screen and (max-width: 800px) {
 	.epdescription p{
@@ -525,6 +522,10 @@ div.contact{
 	}
 	.castmate p{
 		font-size: 1em;
+	}
+	.castmate img{
+		width: 100%;
+		max-width: 100%;
 	}
 	.overlay{
 		font-size: 0.7em;
@@ -630,6 +631,7 @@ iframe.episodevid{
 
 .castimg{
 	width:100%;
+	max-width: 100%;
 	padding: 10px;
 }
 #rishi{
