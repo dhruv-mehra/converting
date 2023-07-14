@@ -19,7 +19,7 @@
 
 body{
 	margin: 0px;
-	font-family: Neue Kabel;
+	font-family: neue-kabel, sans-serif;
 	color: var(--font-color);
 	background-color: var(--bg-color);
 	display: flex;
