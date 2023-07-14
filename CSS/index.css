@@ -324,7 +324,7 @@ p.runtime{
   left: 0;
   right: 0;
   height: 100%;
-  max-width:100%;
+	width:100%;
   opacity: 0;
   transition: .3s ease;
   background-color: rgb(0,0,0, .8);
@@ -375,14 +375,15 @@ h3#filmmakers{
 	align-items: flex-start;
 	flex-direction: row;
 	font-size: 1.25em;
-	padding: 0px;
+	padding: 0px 20px;
 	margin: 0px;
+	width: 100%;
 	max-width: 100%;
 }
 
 .filmmaker{
 	width: 33.33%;
-	padding: 0px;
+	padding: 0px 10px;
 }
 
 .filmmakerimg{
@@ -466,6 +467,7 @@ h3#filmmakers{
 	background-color: var(--secondary-color);
 	color: var(--bg-color);
 	margin: 0px;
+	width: 100%;
 	max-width:100%;
 }
 
@@ -486,7 +488,7 @@ div.contact{
 .contact div{
 	display: flex;
 	flex-direction: column;
-	padding: 0px;
+	padding: 0px 15px;
 }
 
 .contact a{
@@ -591,11 +593,9 @@ li{
 	flex-direction: column;
 	padding: 0px 0px 25px;
 }
-.episodevid{
-	margin: 0px 25px;
-	width:100%;
-}
 iframe.episodevid{
+	width: 100%;
+	max-width: 100%;
 	margin: 0px;
 }
 .epdescription{
@@ -787,5 +787,11 @@ div.contact{
 .directing img{
 	width: 100%;
 	max-width: 100%;
+}
+.castname p{
+	font-size: 1.25em;
+}
+.overlay a{
+	font-size: 1em;
 }
 }
